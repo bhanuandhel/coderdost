@@ -7,9 +7,12 @@ const schema = new mongoose.Schema(
       required: [true, "at least one item is required"],
       default: [],
     },
-    userId: { type: String, default: 1 },
+    userId: {
+      type: String,
+      required: [true, "userId is required"],
+    },
   },
   { timestamps: true }
 );
 
-export const Cart = mongoose.Model("Cart", schema);
+export const Cart = mongoose.model("Cart", schema);

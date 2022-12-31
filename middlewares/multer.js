@@ -2,6 +2,8 @@ import multer from "multer";
 
 const storage = multer.memoryStorage();
 
-const singleUpload = multer({ storage }).single("file");
+const upload = multer({ storage });
 
-export default singleUpload;
+export const singleUpload = upload.single("file");
+
+// export const multipleUpload = upload.array("files", 10); // limit to 10 images

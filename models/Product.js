@@ -4,25 +4,25 @@ const schema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, , "Please enter product name"],
+      required: [true, "Please enter product name"],
     },
     category: {
       type: String,
-      required: [true, , "Please enter category name"],
+      required: [true, "Please enter category name"],
     },
     price: {
       type: Number,
-      required: [true, , "Please enter price"],
+      required: [true, "Please enter price"],
     },
     rating: {
       type: Number,
-      required: [true, , "Please enter rating"],
+      required: [true, "Please enter rating"],
     },
     color: "red" | "green" | "black",
     size: "S" | "M" | "L",
     details: Object,
-    image: { type: String, required: true },
-    images: { type: [String], required: true },
+    image: { type: String, required: false },
+    images: { type: [String], required: false },
   },
   { timestamps: true }
 );
