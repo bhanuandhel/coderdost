@@ -44,7 +44,7 @@ export const getProduct = catchAsyncError(async (req, res, next) => {
   res.status(200).json({
     status: true,
     product,
-    message: "Product add successfuly",
+    message: "get product successfuly",
   });
 });
 
